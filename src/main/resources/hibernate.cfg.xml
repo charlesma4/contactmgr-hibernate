@@ -1,0 +1,16 @@
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="connection.driver_class">org.h2.Driver</property>
+        <property name="connection.url">jdbc:h2./data/contactmgr</property>
+
+        <!-- SQL dialect -->
+        <property name="dialect">org.hibernate.dialect.H2Dialect</property>
+
+        <!-- Create database schema upon starting -->
+        <property name="hbm2ddl.auto">create</property>
+
+        <!-- Names annotated entity classes -->
+        <mapping class="com.teamtreeehouse.contactmgr.model.Contact"/>
+    </session-factory>
+</hibernate-configuration>
